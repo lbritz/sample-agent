@@ -1,0 +1,1354 @@
+{
+  "mcpTranslationVersion": "0.8",
+  "target": {
+    "ordId": "sap.s4:apiResource:API_PURCHASEORDER_PROCESS_SRV:v1",
+    "type": "edmx"
+  },
+  "serverInfo": {
+    "name": "sap.mcp/api_purchaseorder_process_srv",
+    "title": "api_purchaseorder_process_srv",
+    "version": "1.0.0",
+    "description": "MCP server for the api_purchaseorder_process_srv service."
+  },
+  "tools": [
+    {
+      "name": "get_metadata_api_purchaseorder_process_srv",
+      "title": "get_metadata_api_purchaseorder_process_srv",
+      "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+      "odataType": {
+        "metadataRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "batch_for_api_purchaseorder_process_srv",
+      "title": "batch_for_api_purchaseorder_process_srv",
+      "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+      "odataType": {
+        "batchRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false
+      }
+    },
+    {
+      "name": "list_a_purchaseorder_for_api_purchaseorder_process_srv",
+      "title": "list_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a list of entities from the A_PurchaseOrder collection in the api_purchaseorder_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_a_purchaseorder_for_api_purchaseorder_process_srv",
+      "title": "get_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a single entity by its key from the A_PurchaseOrder collection in the api_purchaseorder_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_a_purchaseorder_for_api_purchaseorder_process_srv",
+      "title": "count_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Get the total count of entities in the A_PurchaseOrder collection in the api_purchaseorder_process_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_a_purchaseorderitem_for_api_purchaseorder_process_srv",
+      "title": "list_A_PurchaseOrderItem_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a list of entities from the A_PurchaseOrderItem collection in the api_purchaseorder_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderItem",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_a_purchaseorderitem_for_api_purchaseorder_process_srv",
+      "title": "get_A_PurchaseOrderItem_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a single entity by its key from the A_PurchaseOrderItem collection in the api_purchaseorder_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderItem",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_a_purchaseorderitem_for_api_purchaseorder_process_srv",
+      "title": "count_A_PurchaseOrderItem_for_api_purchaseorder_process_srv",
+      "description": "Get the total count of entities in the A_PurchaseOrderItem collection in the api_purchaseorder_process_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderItem",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_a_purchaseordernote_for_api_purchaseorder_process_srv",
+      "title": "list_A_PurchaseOrderNote_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a list of entities from the A_PurchaseOrderNote collection in the api_purchaseorder_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderNote",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_a_purchaseordernote_for_api_purchaseorder_process_srv",
+      "title": "get_A_PurchaseOrderNote_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a single entity by its key from the A_PurchaseOrderNote collection in the api_purchaseorder_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderNote",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "TextObjectType",
+              "newParameterName": "textobjecttype"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "language"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_a_purchaseorderscheduleline",
+      "title": "list_A_PurchaseOrderScheduleLine_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a list of entities from the A_PurchaseOrderScheduleLine collection in the api_purchaseorder_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderScheduleLine",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_a_purchaseorderscheduleline",
+      "title": "get_A_PurchaseOrderScheduleLine_for_api_purchaseorder_process_srv",
+      "description": "Retrieve a single entity by its key from the A_PurchaseOrderScheduleLine collection in the api_purchaseorder_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderScheduleLine",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "PurchasingDocument",
+              "newParameterName": "purchasingdocument"
+            },
+            {
+              "name": "PurchasingDocumentItem",
+              "newParameterName": "purchasingdocumentitem"
+            },
+            {
+              "name": "ScheduleLine",
+              "newParameterName": "scheduleline"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_a_purchaseorderscheduleline",
+      "title": "count_A_PurchaseOrderScheduleLine_for_api_purchaseorder_process_srv",
+      "description": "Get the total count of entities in the A_PurchaseOrderScheduleLine collection in the api_purchaseorder_process_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderScheduleLine",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_to_purchaseorderitem_in_a_purchaseorder",
+      "title": "list_to_PurchaseOrderItem_in_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Navigate from A_PurchaseOrder to related A_PurchaseOrderItemType entities via the 'to_PurchaseOrderItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "navigationProperty": {
+            "name": "to_PurchaseOrderItem",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_to_purchaseorderitem_in_a_purchaseorder",
+      "title": "count_to_PurchaseOrderItem_in_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Count A_PurchaseOrderItemType entities accessible via the 'to_PurchaseOrderItem' navigation property of A_PurchaseOrder in the api_purchaseorder_process_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "navigationProperty": {
+            "name": "to_PurchaseOrderItem",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_to_purchaseordernote_in_a_purchaseorder",
+      "title": "list_to_PurchaseOrderNote_in_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Navigate from A_PurchaseOrder to related A_PurchaseOrderNoteType entities via the 'to_PurchaseOrderNote' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "navigationProperty": {
+            "name": "to_PurchaseOrderNote",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_to_purchaseordernote_in_a_purchaseorder",
+      "title": "count_to_PurchaseOrderNote_in_A_PurchaseOrder_for_api_purchaseorder_process_srv",
+      "description": "Count A_PurchaseOrderNoteType entities accessible via the 'to_PurchaseOrderNote' navigation property of A_PurchaseOrder in the api_purchaseorder_process_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrder",
+          "navigationProperty": {
+            "name": "to_PurchaseOrderNote",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_to_scheduleline_in_a_purchaseorderitem",
+      "title": "list_to_ScheduleLine_in_A_PurchaseOrderItem_for_api_purchaseorder_process_srv",
+      "description": "Navigate from A_PurchaseOrderItem to related A_PurchaseOrderScheduleLineType entities via the 'to_ScheduleLine' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_api_purchaseorder_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderItem",
+          "navigationProperty": {
+            "name": "to_ScheduleLine",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "inlinecount"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "count_to_scheduleline_in_a_purchaseorderitem",
+      "title": "count_to_ScheduleLine_in_A_PurchaseOrderItem_for_api_purchaseorder_process_srv",
+      "description": "Count A_PurchaseOrderScheduleLineType entities accessible via the 'to_ScheduleLine' navigation property of A_PurchaseOrderItem in the api_purchaseorder_process_srv service. Returns the total number of matching entities.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_PurchaseOrderItem",
+          "navigationProperty": {
+            "name": "to_ScheduleLine",
+            "crudOperation": "count",
+            "parameters": [
+              {
+                "name": "filter"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    }
+  ]
+}

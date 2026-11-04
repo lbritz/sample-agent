@@ -1,0 +1,435 @@
+{
+  "servers": {
+    "s4-purchaseorder-process-srv": {
+      "mcp_server_name": "sap.mcp/api_purchaseorder_process_srv",
+      "description": "MCP server for the api_purchaseorder_process_srv service.",
+      "tools": {
+        "get_metadata_api_purchaseorder_process_srv": {
+          "description": "Get metadata of the OData service. Returns metadata in XML format to discover available entities and their properties.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "Filter to reduce metadata returned" }
+            },
+            "required": []
+          },
+          "mock_response": "<edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"API_PURCHASEORDER_PROCESS_SRV\"></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_api_purchaseorder_process_srv": {
+          "description": "Execute multiple OData operations in a single batch request.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "requests": { "type": "array", "description": "Array of batch requests" }
+            },
+            "required": []
+          },
+          "mock_response": { "responses": [] }
+        },
+        "list_a_purchaseorder_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a list of entities from the A_PurchaseOrder collection. Supports OData query options for filtering, sorting, paging, expanding, and selecting.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of records to return (max 100)" },
+              "$skip": { "type": "string", "description": "Number of records to skip" },
+              "$filter": { "type": "string", "description": "OData filter expression (e.g. Supplier eq 'ACME001')" },
+              "$select": { "type": "string", "description": "Comma-separated list of fields to return" },
+              "$orderby": { "type": "string", "description": "Field to sort by" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderType": "NB",
+                  "PurchasingOrganization": "1000",
+                  "PurchasingGroup": "001",
+                  "Supplier": "ACME001",
+                  "CompanyCode": "1000",
+                  "PurchaseOrderDate": "/Date(1730131200000)/",
+                  "DocumentCurrency": "EUR",
+                  "NetPriceAmount": "75000.00",
+                  "PurchaseOrderStatus": "B",
+                  "CreatedByUser": "JSMITH",
+                  "CreationDate": "/Date(1730131200000)/"
+                },
+                {
+                  "PurchaseOrder": "4500001235",
+                  "PurchaseOrderType": "NB",
+                  "PurchasingOrganization": "1000",
+                  "PurchasingGroup": "002",
+                  "Supplier": "VENDOR002",
+                  "CompanyCode": "1000",
+                  "PurchaseOrderDate": "/Date(1730217600000)/",
+                  "DocumentCurrency": "EUR",
+                  "NetPriceAmount": "12500.00",
+                  "PurchaseOrderStatus": "B",
+                  "CreatedByUser": "AKLEIN",
+                  "CreationDate": "/Date(1730217600000)/"
+                }
+              ]
+            }
+          }
+        },
+        "get_a_purchaseorder_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a single purchase order by its key (PurchaseOrder number).",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number (e.g. 4500001234)" },
+              "$select": { "type": "string", "description": "Comma-separated list of fields to return" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": ["PurchaseOrder"]
+          },
+          "mock_response": {
+            "d": {
+              "PurchaseOrder": "4500001234",
+              "PurchaseOrderType": "NB",
+              "PurchasingOrganization": "1000",
+              "PurchasingGroup": "001",
+              "Supplier": "ACME001",
+              "CompanyCode": "1000",
+              "PurchaseOrderDate": "/Date(1730131200000)/",
+              "DocumentCurrency": "EUR",
+              "NetPriceAmount": "75000.00",
+              "PurchaseOrderStatus": "B",
+              "CreatedByUser": "JSMITH",
+              "CreationDate": "/Date(1730131200000)/"
+            }
+          }
+        },
+        "count_a_purchaseorder_for_api_purchaseorder_process_srv": {
+          "description": "Get the total count of purchase orders matching an optional filter.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": 42
+        },
+        "list_a_purchaseorderitem_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a list of purchase order items from A_PurchaseOrderItem collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of records (max 100)" },
+              "$skip": { "type": "string", "description": "Number of records to skip" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$orderby": { "type": "string", "description": "Sort order" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00010",
+                  "Plant": "1000",
+                  "Material": "MAT-001",
+                  "ShortText": "Office Supplies",
+                  "PurchaseOrderQuantity": "100",
+                  "PurchaseOrderQuantityUnit": "EA",
+                  "NetPriceAmount": "50000.00",
+                  "DocumentCurrency": "EUR",
+                  "ManualDeliveryAddressID": "",
+                  "PurchaseOrderItemStatus": "B"
+                },
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00020",
+                  "Plant": "1000",
+                  "Material": "MAT-002",
+                  "ShortText": "IT Equipment",
+                  "PurchaseOrderQuantity": "10",
+                  "PurchaseOrderQuantityUnit": "EA",
+                  "NetPriceAmount": "25000.00",
+                  "DocumentCurrency": "EUR",
+                  "PurchaseOrderItemStatus": "B"
+                }
+              ]
+            }
+          }
+        },
+        "get_a_purchaseorderitem_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a single purchase order item by its key (PurchaseOrder + PurchaseOrderItem).",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "PurchaseOrderItem": { "type": "string", "description": "Purchase order item number (e.g. 00010)" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" }
+            },
+            "required": ["PurchaseOrder", "PurchaseOrderItem"]
+          },
+          "mock_response": {
+            "d": {
+              "PurchaseOrder": "4500001234",
+              "PurchaseOrderItem": "00010",
+              "Plant": "1000",
+              "Material": "MAT-001",
+              "ShortText": "Office Supplies",
+              "PurchaseOrderQuantity": "100",
+              "PurchaseOrderQuantityUnit": "EA",
+              "NetPriceAmount": "50000.00",
+              "DocumentCurrency": "EUR",
+              "PurchaseOrderItemStatus": "B"
+            }
+          }
+        },
+        "count_a_purchaseorderitem_for_api_purchaseorder_process_srv": {
+          "description": "Get the total count of purchase order items matching an optional filter.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": 5
+        },
+        "list_a_purchaseordernote_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a list of purchase order header notes from A_PurchaseOrderNote collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of records (max 100)" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "TextObjectType": "F01",
+                  "Language": "EN",
+                  "PlainLongText": "Standard procurement note for office supplies order."
+                }
+              ]
+            }
+          }
+        },
+        "get_a_purchaseordernote_for_api_purchaseorder_process_srv": {
+          "description": "Retrieve a single purchase order note by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "TextObjectType": { "type": "string", "description": "Text object type" },
+              "Language": { "type": "string", "description": "Language key" }
+            },
+            "required": ["PurchaseOrder", "TextObjectType", "Language"]
+          },
+          "mock_response": {
+            "d": {
+              "PurchaseOrder": "4500001234",
+              "TextObjectType": "F01",
+              "Language": "EN",
+              "PlainLongText": "Standard procurement note for office supplies order."
+            }
+          }
+        },
+        "list_a_purchaseorderscheduleline": {
+          "description": "Retrieve a list of purchase order schedule lines from A_PurchaseOrderScheduleLine collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of records (max 100)" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" },
+              "$orderby": { "type": "string", "description": "Sort order" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00010",
+                  "ScheduleLine": "0001",
+                  "ScheduleLineDeliveryDate": "/Date(1732723200000)/",
+                  "ScheduleLineOrderQuantity": "100",
+                  "PurchaseOrderQuantityUnit": "EA",
+                  "DelivComplIsConfirmed": false
+                }
+              ]
+            }
+          }
+        },
+        "get_a_purchaseorderscheduleline": {
+          "description": "Retrieve a single schedule line by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "PurchaseOrderItem": { "type": "string", "description": "Purchase order item number" },
+              "ScheduleLine": { "type": "string", "description": "Schedule line number" }
+            },
+            "required": ["PurchaseOrder", "PurchaseOrderItem", "ScheduleLine"]
+          },
+          "mock_response": {
+            "d": {
+              "PurchaseOrder": "4500001234",
+              "PurchaseOrderItem": "00010",
+              "ScheduleLine": "0001",
+              "ScheduleLineDeliveryDate": "/Date(1732723200000)/",
+              "ScheduleLineOrderQuantity": "100",
+              "PurchaseOrderQuantityUnit": "EA",
+              "DelivComplIsConfirmed": false
+            }
+          }
+        },
+        "count_a_purchaseorderscheduleline": {
+          "description": "Get the total count of purchase order schedule lines matching an optional filter.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string", "description": "OData filter expression" }
+            },
+            "required": []
+          },
+          "mock_response": 3
+        },
+        "list_to_purchaseorderitem_in_a_purchaseorder": {
+          "description": "Navigate from A_PurchaseOrder to its A_PurchaseOrderItem entities via the to_PurchaseOrderItem navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "$top": { "type": "string", "description": "Maximum number of records (max 100)" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Fields to return" }
+            },
+            "required": ["PurchaseOrder"]
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00010",
+                  "ShortText": "Office Supplies",
+                  "NetPriceAmount": "50000.00",
+                  "DocumentCurrency": "EUR"
+                },
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00020",
+                  "ShortText": "IT Equipment",
+                  "NetPriceAmount": "25000.00",
+                  "DocumentCurrency": "EUR"
+                }
+              ]
+            }
+          }
+        },
+        "count_to_purchaseorderitem_in_a_purchaseorder": {
+          "description": "Count A_PurchaseOrderItem entities accessible via the to_PurchaseOrderItem navigation property of A_PurchaseOrder.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" }
+            },
+            "required": ["PurchaseOrder"]
+          },
+          "mock_response": 2
+        },
+        "list_to_purchaseordernote_in_a_purchaseorder": {
+          "description": "Navigate from A_PurchaseOrder to its A_PurchaseOrderNote entities via the to_PurchaseOrderNote navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "$select": { "type": "string", "description": "Fields to return" }
+            },
+            "required": ["PurchaseOrder"]
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "TextObjectType": "F01",
+                  "Language": "EN",
+                  "PlainLongText": "Standard note."
+                }
+              ]
+            }
+          }
+        },
+        "count_to_purchaseordernote_in_a_purchaseorder": {
+          "description": "Count A_PurchaseOrderNote entities via the to_PurchaseOrderNote navigation property of A_PurchaseOrder.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" }
+            },
+            "required": ["PurchaseOrder"]
+          },
+          "mock_response": 1
+        },
+        "list_to_scheduleline_in_a_purchaseorderitem": {
+          "description": "Navigate from A_PurchaseOrderItem to its A_PurchaseOrderScheduleLine entities via the to_ScheduleLine navigation property.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "PurchaseOrderItem": { "type": "string", "description": "Purchase order item number" },
+              "$select": { "type": "string", "description": "Fields to return" }
+            },
+            "required": ["PurchaseOrder", "PurchaseOrderItem"]
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "PurchaseOrder": "4500001234",
+                  "PurchaseOrderItem": "00010",
+                  "ScheduleLine": "0001",
+                  "ScheduleLineDeliveryDate": "/Date(1732723200000)/",
+                  "ScheduleLineOrderQuantity": "100"
+                }
+              ]
+            }
+          }
+        },
+        "count_to_scheduleline_in_a_purchaseorderitem": {
+          "description": "Count A_PurchaseOrderScheduleLine entities via the to_ScheduleLine navigation property of A_PurchaseOrderItem.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "PurchaseOrder": { "type": "string", "description": "Purchase order number" },
+              "PurchaseOrderItem": { "type": "string", "description": "Purchase order item number" }
+            },
+            "required": ["PurchaseOrder", "PurchaseOrderItem"]
+          },
+          "mock_response": 1
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "procurement-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 1,
+    "total_tools": 19,
+    "generated_from": ["translation.json"],
+    "generation_date": "2026-10-30"
+  }
+}

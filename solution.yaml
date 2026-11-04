@@ -1,0 +1,11 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: s4hana-procurement-agent-9ac6b
+  version: "1.0.0"
+  description: AI agent connected to SAP S/4HANA On-Premise that allows Procurement Managers to query and analyze purchase order data using natural language.
+
+assets:
+  - ref: ./assets/procurement-agent/asset.yaml
+  - ref: ./assets/sap-s4-purchaseorder-process-srv-mcp-server/asset.yaml
